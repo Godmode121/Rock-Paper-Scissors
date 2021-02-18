@@ -18,7 +18,7 @@
                 return "scissors";
             }
         }
-        function playround(playerselection, computerselection) {
+        function playround(playerselection, computerselection)  {
             if (playerselection === "rock" && computerselection === "paper") {
                 return "You lose, paper beats rock!";
             } else if (playerselection === "rock" && computerselection === "scissors") {
@@ -37,11 +37,11 @@
                 return "You lose, rock beats scissors";
             } else if (playerselection === "scissors" && computerselection === "paper") {
                 return "You win, scissors beats paper!";
-            } 
+            }
         } 
         const playerselection = "Rock";
         const computerselection = computerplay();
-        console.log(playround(playerselection, computerselection));
+        console.log(playround(playerselection.toLowerCase(), computerselection));
     </script>
 </head>
 
