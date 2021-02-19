@@ -24,18 +24,26 @@
                 return "scissors";
             }
         }
-        function playround(playerSelection, computerSelection) {
-            if (playerSelection === "rock" && computerSelection === "rock") {
-                return "It's a tie!!!";
-            } else if (playerSelection === "paper" && computerSelection === "paper") {
-                return "It's a tie!!!";
-            } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-                return "It's a tie!!!";
+        function playround(playerSelection) {
+            if (playerSelection === computerSelection) {
+                return playround = "It's a tie!!!";
             } else if (playerSelection === "rock" && computerSelection === "paper") {
-                return ""
+                return "Rock loses to paper, point to computer";
+            } else if (playerSelection === "rock" && computerSelection === "scissors") {
+                return "Rock beats scissors, point to player";
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+                return "Paper beats rock, point to player";
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                return "Paper loses to scissors, point to computer";
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                return "Scissors loses to rock, point to computer";
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                return "Scissors beats paper, point to player";
             }
         }
+        const playerSelection = "Rock";
         const computerSelection = computerPlay();
+        console.log(playround(playerSelection.toLowerCase(), computerSelection));
         //window.prompt("Choose your weapon");
     </script>
 </head>
