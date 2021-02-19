@@ -7,41 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors by Gmode121</title>
     <script>
-        Math.floor(Math.random() * (3) + 1)
-        function computerplay() {
-            result = Math.floor(Math.random() * (3) + 1);
-            if (result === 1) {
+        let playerscore = 0;
+        let computerscore = 0;
+        let rock;
+        let paper;
+        let scissors;
+
+        Math.floor(Math.random() * 3);
+        function computerPlay() {
+            result = Math.floor(Math.random() * 3);
+            if (result === 0) {
                 return "rock";
-            } else if (result === 2) {
+            } else if (result === 1) {
                 return "paper";
             } else {
                 return "scissors";
             }
         }
-        function playround(playerselection, computerselection)  {
-            if (playerselection === "rock" && computerselection === "paper") {
-                return "You lose, paper beats rock!";
-            } else if (playerselection === "rock" && computerselection === "scissors") {
-                return "You win, rock beats scissors!";
-            } else if (playerselection === "rock" && computerselection === "rock") {
-                return "It's a tie!";
-            } else if (playerselection === "paper" && computerselection === "rock") {
-                return "You win, paper beats rock!";
-            } else if (playerselection === "paper" && computerselection === "paper") {
-                return "It's a tie!";
-            } else if (playerselection === "paper" && computerselection === "scissors") {
-                return "You lose, scissors beats paper";
-            } else if (playerselection === "scissors" && computerselection === "scissors") {
-                return "It's a tie!";
-            } else if (playerselection === "scissors" && computerselection === "rock") {
-                return "You lose, rock beats scissors";
-            } else if (playerselection === "scissors" && computerselection === "paper") {
-                return "You win, scissors beats paper!";
+        function playround(playerSelection, computerSelection) {
+            if (playerSelection === "rock" && computerSelection === "rock") {
+                return "It's a tie!!!";
+            } else if (playerSelection === "paper" && computerSelection === "paper") {
+                return "It's a tie!!!";
+            } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                return "It's a tie!!!";
+            } else if (playerSelection === "rock" && computerSelection === "paper") {
+                return ""
             }
-        } 
-        const playerselection = "Rock";
-        const computerselection = computerplay();
-        console.log(playround(playerselection.toLowerCase(), computerselection));
+        }
+        const computerSelection = computerPlay();
+        //window.prompt("Choose your weapon");
     </script>
 </head>
 
